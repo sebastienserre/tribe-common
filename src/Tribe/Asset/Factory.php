@@ -1,9 +1,12 @@
 <?php
 class Tribe__Asset__Factory {
 	/**
+	 * @todo review and sort out the dependency on a TEC class (Tribe__Events__Asset__Abstract_Asset)
+	 *       as ideally there would be a base abstract in tribe-common
+	 *
 	 * @param string $name
 	 *
-	 * @return Tribe__Asset__Abstract_Asset|false Either a new instance of the asset class or false.
+	 * @return Tribe__Events__Asset__Abstract_Asset|false Either a new instance of the asset class or false.
 	 */
 	public function make_for_name( $name ) {
 		// `jquery-resize` to `Jquery_Resize`

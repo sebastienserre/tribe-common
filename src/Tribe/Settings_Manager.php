@@ -110,6 +110,7 @@ class Tribe__Settings_Manager {
 		if ( $apply_filters == true ) {
 			$options = apply_filters( 'tribe-events-save-options', $options );
 		}
+
 		return update_option( Tribe__Main::OPTIONNAME, $options );
 	}
 

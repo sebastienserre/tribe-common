@@ -1,21 +1,16 @@
 <?php
-/**
- * Templating functionality for common tribe
- */
-
-// don't load directly
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-if ( class_exists( 'Tribe__Templates' ) ) {
+if ( class_exists( 'Tribe__Views' ) ) {
 	return;
 }
 
 /**
  * Handle views and template files.
  */
-class Tribe__Templates {
+class Tribe__Views {
 	/**
 	 * Check to see if this is operating in the main loop
 	 *
