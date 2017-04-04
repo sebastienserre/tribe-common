@@ -11,7 +11,7 @@ tests/unit.suite.yml
 tests/_output/*
 
 # by default ignore all, need a vendor dep in the repo? use !vendor/acme
-vendor/*
+vendor
 !vendor/jquery
 !vendor/select2
 !vendor/clipboard
