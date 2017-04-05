@@ -3,15 +3,15 @@ modules:
     enabled:
         - \Helper\Wpunit
         - WPLoader:
-            wpRootFolder: ~/www/wordpress
-            dbName: tec-tests
+            wpRootFolder: /Users/bordoni/tribe/localhost/test
+            dbName: test.tri.be
             dbHost: localhost
             dbUser: root
-            dbPassword: password
+            dbPassword: root
             wpDebug: true
             tablePrefix: wptests_
-            domain: tec.tri.be
-            adminEmail: admin@tec.tri.be
+            domain: test.tri.be
+            adminEmail: gustavo@tri.be
             title: 'Event Common Tests'
             plugins:
                 - the-events-calendar/the-events-calendar.php

@@ -9,17 +9,3 @@ modules:
     enabled:
         - \Helper\Functional
         - Filesystem
-        - WPDb:
-            dsn: 'mysql:host=localhost;dbname=tribe-pro'
-            user: root
-            password: root
-            dump: tests/_data/dump.sql
-            populate: true
-            cleanup: true
-            url: 'http://tribe-pro.dev'
-            tablePrefix: wp_
-        - WordPress:
-            depends: WPDb
-            wpRootFolder: /Users/Luca/Sites/tribe-pro
-            adminUsername: admin
-            adminPassword: admin

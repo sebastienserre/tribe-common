@@ -8,8 +8,3 @@ class_name: AcceptanceTester
 modules:
     enabled:
         - \Helper\Acceptance
-        - WPBrowser:
-            url: 'http://wp.local'
-            adminUsername: admin
-            adminPassword: password
-            adminPath: /wp-admin
