@@ -71,21 +71,6 @@ abstract class Tribe__Change_Authority__Base {
 	}
 
 	/**
-	 * Sets a condition that will be evaluated before a field propagation is done to check whether the propagation
-	 * should happen or not.
-	 *
-	 * The callback function will receive three arguments:
-	 *          $from - the source object or data
-	 *          $to - the destination object or data
-	 *          $field - the propagation target field
-	 *
-	 * @param callable $callback
-	 */
-	public function set_propagation_condition( $callback ) {
-		$this->propagation_conditions[] = $callback;
-	}
-
-	/**
 	 * Evaluates the set propagation conditions in an AND logic.
 	 *
 	 * @param mixed  $from  The source object or data.
@@ -108,5 +93,31 @@ abstract class Tribe__Change_Authority__Base {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Propagates a field from the source to the destination.
+	 *
+	 * @param mixed  $from  The source object or data.
+	 * @param mixed  $to    The destination object or data.
+	 * @param string $field The name of the field that's to be evaluated for propagation.
+	 *
+	 * @return bool Whether the field was propagated or not.
+	 */
+	abstract public function propagate_field( $from, $to, $field );
+
+	/**
+	 * Sets a condition that will be evaluated before a field propagation is done to check whether the propagation
+	 * should happen or not.
+	 *
+	 * The callback function will receive three arguments:
+	 *          $from - the source object or data
+	 *          $to - the destination object or data
+	 *          $field - the propagation target field
+	 *
+	 * @param callable $callback
+	 */
+	public function set_propagation_condition( $callback ) {
+		$this->propagation_conditions[] = $callback;
 	}
 }
